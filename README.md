@@ -2,8 +2,8 @@
 
 
 <img src="./notebooks/figures/model_design.png" 
-     align="left" 
-     width="400" />
+     align="centre" 
+     width="1000" />
 
 
 ## **Abstract** 
