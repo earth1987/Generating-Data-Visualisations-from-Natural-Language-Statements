@@ -17,7 +17,6 @@ Over the past decade there has been an increase in data driven decision making a
 |- nl2vis/
    |- custom_funcs.py
    |- config.py
-|- README.md
 |- data/
    |- raw/
    |- processed/
@@ -27,12 +26,14 @@ Over the past decade there has been an increase in data driven decision making a
    |- shell-scripts.py
    |- archive/
 |- environment.yml
+|- README.md
 |- William Pitchford - MSc in Data Science - Thesis 21 12 2022.pdf
 </pre>
 
 ## **Notebooks**
 
-**1_prompt_engineering.ipynb:** 
+**1_prompt_engineering.ipynb**
+
 This workbook is used to create prompts comprised of five key components: a description of the task, completed in-context examples, metadata describing the content of the relevant dataset, the problem of interest and an incomplete solution which acts as a prefix to the generated tokens.
 
 In-context examples are matched with problems based on semantic similarity. For a given problem the semantic search was implemented using the below steps.
@@ -41,12 +42,17 @@ In-context examples are matched with problems based on semantic similarity. For 
 3. The pool of potential examples was sorted in descending order of cosine similarity score. The highest scoring example was assumed to be the most semantically similar. The top one to three examples were used.
 
 **2_train_inference.ipynb**
-This workbook is used to conduct a gridsearch 
+
+This workbook enables inference using pre-trained autoregressive models implemented in the Hugging Face library. Ten-fold cross validation hyperparameter grid searches are conducted on the training data. When testing problems in a validation set, in-context examples are drawn from the remaining nine sets. This approach enables optimisation of the prompt design (number of in-context examples) and decoding strategy (Top-P: threshold p, Top-K: threshold k & softmax temperature).
+
+Note: Two pre-trained autoregressive models developed by EleutherAI were used in this research project: GPT-Neo and GPT-J. 
 
 **3_validate_train_outputs.ipynb**
 
-**4_test_inference.ipynb:**
+Two evaluation metrics are utilised: valid@k and pass@k. Valid@k represents the validation rate with k samples. For example, valid@1 would represent the fraction of problems of which the model generated a valid Vega-Lite specification in 1 sample. Similarly, pass@k represents the pass rate with k samples. Where pass@1 would represent the fraction of problems of which the model generated a Vega-Lite specification that passed all logical tests. Similar to recent studies, model performance was also assessed when k was greater than one. Specifically, with with 10 independent samples per problem.
 
-**5_validate_outputs.ipynb:**
+**4_test_inference.ipynb**
 
-**6_logic_tests.ipynb:**
+**5_validate_outputs.ipynb**
+
+**6_logic_tests.ipynb**
