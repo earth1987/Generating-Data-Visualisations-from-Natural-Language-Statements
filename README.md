@@ -16,6 +16,8 @@ this show successful generation of data visualisations using pre-trained autoreg
 <pre>
 |- notebooks/
    |- 1_prompt_engineering.ipynb
+   |- 2_train_inference.ipynb
+   |- 3_validate_train_outputs.ipynb
    |- 4_test_inference.ipynb
    |- 5_validate_outputs.ipynb
    |- 6_logic_tests.ipynb
@@ -35,10 +37,15 @@ this show successful generation of data visualisations using pre-trained autoreg
    |- archive/
 |- environment.yml
 |- William Pitchford - MSc in Data Science - Thesis 21 12 2022.pdf
-<pre>
+</pre>
+
 ## **Notebooks**
 
 **1_prompt_engineering.ipynb:**
+
+**2_train_inference.ipynb**
+
+**3_validate_train_outputs.ipynb**
 
 **4_test_inference.ipynb:**
 
