@@ -39,6 +39,10 @@ Over the past decade there has been an increase in data driven decision making a
 
 **1_prompt_engineering.ipynb**
 
+<img src="./nl2vis/figures/prompt_design.png" 
+     align="left" 
+     width="1000" />
+     
 This workbook is used to create prompts comprised of five key components: a description of the task, completed in-context examples, metadata describing the content of the relevant dataset, the problem of interest and an incomplete solution which acts as a prefix to the generated tokens.
 
 In-context examples are matched with problems based on semantic similarity. For a given problem the semantic search is implemented using the below steps.
