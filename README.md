@@ -22,8 +22,7 @@ Over the past decade there has been an increase in data driven decision making a
    |- processed/
    |- cleaned/
 |- scripts/
-   |- RO1_gptneo125m_1.sh
-   |- shell-scripts.py
+   |- shell-scripts.sh
    |- archive/
 |- environment.yml
 |- README.md
