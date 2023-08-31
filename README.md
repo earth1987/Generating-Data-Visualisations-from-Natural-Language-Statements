@@ -1,6 +1,6 @@
 # Generating-Data-Visualisations-from-Natural-Language-Statements
 
-<img src="./nl2vis/figures/model_design.png" 
+<img src="./notebooks/figures/model_design.png" 
      align="left" 
      width="400" />
 
