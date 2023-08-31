@@ -43,7 +43,7 @@ In-context examples are matched with problems based on semantic similarity. For 
 
 **2_train_inference.ipynb**
 
-This workbook enables optimisation of hyperparameters via ten-fold cross validation grid searches. It is compatible with pre-trained autoregressive models implemented in the Hugging Face library. Two pre-trained autoregressive models developed by EleutherAI were used in this research project: GPT-Neo and GPT-J. 
+This workbook enables optimisation of hyperparameters via ten-fold cross validation grid searches. It is compatible with pre-trained autoregressive models implemented in the Hugging Face library. In this project, two models by EleutherAI were tested: GPT-Neo and GPT-J. 
 
 Note: When testing problems in a validation set, in-context examples are drawn from the remaining nine sets. This approach enables optimisation of the prompt design (number of in-context examples) and decoding strategy (Top-P: threshold p, Top-K: threshold k & softmax temperature).
 
@@ -51,16 +51,22 @@ Note: When testing problems in a validation set, in-context examples are drawn f
 
 This workbook enables validation of specifications generated for training data. Furthermore it provides a comparison of performance for different hyperparameter configurations.
 
-Two evaluation metrics are utilised: valid@k and pass@k. Valid@k represents the validation rate with k samples. For example, valid@1 would represent the fraction of problems of which the model generated a valid Vega-Lite specification in 1 sample. Similarly, pass@k represents the pass rate with k samples. Where pass@1 would represent the fraction of problems of which the model generated a Vega-Lite specification that passed all logical tests. Similar to recent studies, model performance was also assessed when k was greater than one. Specifically, with 10 independent samples per problem.
+The key evaluation metric is valid@k. This indicates the validation rate with k independent samples per problem. For example, valid@1 represents the fraction of problems for which the model generated a valid Vega-Lite specification in 1 sample.
 
 **4_test_inference.ipynb**
 
 This workbook enables application of pre-trained autoregressive models, implemented in the Hugging Face library, to test data. 
 
+Note: When testing problems in the training set, in-context examples are drawn from the training data.
+
 **5_validate_outputs.ipynb**
 
-This workbook enables validation of specifications generated for test data. Two evaluation metrics are utilised: valid@k and pass@k.
+This workbook enables validation of specifications generated for test data.
+
+The key evaluation metric is calid@k. This indicates the validation rate with k independent samples per problem. For example, valid@1 represents the fraction of problems for which the model generated a valid Vega-Lite specification with just 1 sample.
 
 **6_logic_tests.ipynb**
 
 This workbook enables application of logical unit tests to specifications generated for test data.
+
+The key evaluation metric is pass@k. This indicates the the pass rate with k independent samples per problem. For example, pass@1 gives the fraction of problems for which the model generated a Vega-Lite specification that passed all logical tests with just 1 sample.
