@@ -13,7 +13,7 @@ capable of generating data visualisations from natural language statements. The 
 this show successful generation of data visualisations using pre-trained autoregressive models for the first time.
 
 ## **File structure**
-"""
+<pre>
 |- notebooks/
    |- 1_prompt_engineering.ipynb
    |- 4_test_inference.ipynb
@@ -35,7 +35,7 @@ this show successful generation of data visualisations using pre-trained autoreg
    |- archive/
 |- environment.yml
 |- William Pitchford - MSc in Data Science - Thesis 21 12 2022.pdf
-"""
+<pre>
 ## **Notebooks**
 
 **1_prompt_engineering.ipynb:**
