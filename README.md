@@ -36,7 +36,7 @@ Over the past decade there has been an increase in data driven decision making a
 ## **Notebooks**
 
 **1_prompt_engineering.ipynb**
-<img src="./notebooks/figures/prompt_design.png" 
+<img src="./notebooks/figures/prompt_template.png" 
      align="left" 
      width="1000" />
      
